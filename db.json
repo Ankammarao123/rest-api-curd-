@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "username": "ankamma",
+      "password": "9533521852",
+      "email": "ankmmarao.bojja@ojas-it.com",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,38 @@
+<div class="container">
+    <form [formGroup]="empform">
+        <label>Username</label>
+        <input formControlName="uname" class="form-control" formControlName="username">
+        <label>password</label>
+        <input formControlName="uname" class="form-control" formControlName="password">
+        <label>Email</label>
+        <input formControlName="uname" class="form-control" formControlName="email"><br>
+        <button class="btn btn-success" (click)="savedata(empform.value)">Submit</button>&nbsp;
+        <button class="btn btn-success" (click)="updatedata()">Update</button>
+    </form>
+</div>
+
+
+<div class="container">
+    
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Sno</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr *ngFor="let emp of emplist ;let i=index">
+          <td>{{i+1}}</td>
+          <td>{{emp.username}}</td>
+          <td>{{emp.password}}</td>
+          <td>{{emp.email}}</td>
+         <td> <button class="btn btn-info" (click)="editemp(emp)">Edit</button>&nbsp;
+            <td><button class="btn btn-danger" (click)="deldata(emp)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
